@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.symmetric(horizontal: 40),
               child: Text(
-                "LOGIN",
+                "CONNEXION",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF2661FA),
@@ -33,7 +33,7 @@ class LoginScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Username"
+                    labelText: "nom d'utilisateur"
                 ),
               ),
             ),
@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Password"
+                    labelText: "mot de passe"
                 ),
                 obscureText: true,
               ),
@@ -55,7 +55,7 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.centerRight,
               margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
               child: Text(
-                "Forgot your password?",
+                "Mot de passe oublié",
                 style: TextStyle(
                     fontSize: 12,
                     color: Color(0XFF2661FA)
@@ -73,19 +73,19 @@ class LoginScreen extends StatelessWidget {
                 child: Container(
                   alignment: Alignment.center,
                   height: 50.0,
-                  width: size.width * 0.5,
+                  width: size.width * 1,
                   decoration: new BoxDecoration(
-                      borderRadius: BorderRadius.circular(80.0),
+                      borderRadius: BorderRadius.circular(0.0),
                       gradient: new LinearGradient(
                           colors: [
-                            Color.fromARGB(255, 255, 136, 34),
-                            Color.fromARGB(255, 255, 177, 41)
+                            Colors.transparent,
+                            Colors.blue,
                           ]
                       )
                   ),
                   padding: const EdgeInsets.all(0),
                   child: Text(
-                    "LOGIN",
+                    "se connecter",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold
@@ -100,10 +100,10 @@ class LoginScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
               child: GestureDetector(
                 onTap: () => {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen()))
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => InscriptionPage()))
                 },
                 child: Text(
-                  "Don't Have an Account? Sign up",
+                  "Créer un nouveau compte",
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
