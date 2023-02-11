@@ -1,8 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:mn_app/Pages/login.dart';
 import 'package:mn_app/Pages/background.dart';
 
-class RegisterScreen extends StatelessWidget {
+class InscriptionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -16,7 +17,7 @@ class RegisterScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.symmetric(horizontal: 40),
               child: Text(
-                "REGISTER",
+                "INSCRIPTION",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF2661FA),
@@ -33,7 +34,7 @@ class RegisterScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Name"
+                    labelText: "Nom"
                 ),
               ),
             ),
@@ -45,7 +46,7 @@ class RegisterScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Mobile Number"
+                    labelText: "Numéro de téléphone"
                 ),
               ),
             ),
@@ -57,7 +58,7 @@ class RegisterScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Username"
+                    labelText: "Prénom"
                 ),
               ),
             ),
@@ -69,7 +70,18 @@ class RegisterScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Password"
+                    labelText: "mot de passe"
+                ),
+                obscureText: true,
+              ),
+            ),
+            SizedBox(height: size.height * 0.03),
+            Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(horizontal: 40),
+              child: TextField(
+                decoration: InputDecoration(
+                    labelText: "confirmer mot de passe"
                 ),
                 obscureText: true,
               ),
@@ -90,14 +102,14 @@ class RegisterScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(80.0),
                       gradient: new LinearGradient(
                           colors: [
-                            Color.fromARGB(255, 255, 136, 34),
-                            Color.fromARGB(255, 255, 177, 41)
+                            Colors.transparent,
+                            Colors.blue,
                           ]
                       )
                   ),
                   padding: const EdgeInsets.all(0),
                   child: Text(
-                    "SIGN UP",
+                    "s'inscrire",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold
@@ -115,7 +127,7 @@ class RegisterScreen extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()))
                 },
                 child: Text(
-                  "Already Have an Account? Sign in",
+                  "Si vous allez un compte? connecter-vous",
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
